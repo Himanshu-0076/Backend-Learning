@@ -1,0 +1,23 @@
+{
+  "name": "backend-learning",
+  "version": "1.0.0",
+  "description": "\"this is Backend learning\"",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Himanshu-0076/Backend-Learning.git"
+  },
+  "author": "Himanshu Thakur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Himanshu-0076/Backend-Learning/issues"
+  },
+  "homepage": "https://github.com/Himanshu-0076/Backend-Learning#readme",
+  "dependencies": {
+    "accessibility": "^3.0.9",
+    "express": "^5.2.1"
+  }
+}
