@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Himanshu-0076/Backend-Learning#readme",
   "dependencies": {
     "accessibility": "^3.0.9",
+    "cookie-parser": "^1.4.7",
     "express": "^5.2.1"
   }
 }
