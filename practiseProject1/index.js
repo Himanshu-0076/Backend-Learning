@@ -56,7 +56,7 @@ app.post("/update/:filename", function(req, res){
     })
 })
 
-app.listen(3000, function(){
+app.listen(3001, function(){
     console.log("Yooooooo Server running.....");
 })
 
