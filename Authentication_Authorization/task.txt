@@ -1,0 +1,9 @@
+create user account
+    mongoose
+    schema
+    model
+    usercreate -> password -> Hash
+    jwt Token -> cookie
+
+
+    login -> token -> decrypt -> email
