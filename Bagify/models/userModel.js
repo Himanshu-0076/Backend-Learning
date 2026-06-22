@@ -1,13 +1,19 @@
 const mongoose = require("mongoose");
+const Joi = require("joi");
 
 const userSchema = mongoose.Schema({
     fullname: {
         type: String,
         minLength: 3,
-        trim: true
+        trim: true,
+        
     },
-    email: String,
-    password: String,
+    email: {
+        type: String,
+    },
+    password: {
+        type: String,
+    },
     cart: {
         type: Array,
         default: []

@@ -2,9 +2,14 @@ const userModel = require("../models/userModel")
 const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
 const {generateToken} = require("../utils/generateToken")
+const validateUser = require("../utils/validateUser")
 
 module.exports.registerUser = async function (req, res){
     try {
+
+        const {error} = validateUser(req.body);
+        if(error) return res.status(400).send(error.details[0].message)
+        
         let { fullname, email, password } = req.body;
 
         let user = await userModel.findOne({email: email})

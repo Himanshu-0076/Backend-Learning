@@ -4,10 +4,15 @@ const ownerSchema = mongoose.Schema({
     fullname: {
         type: String,
         minLength: 3,
+        minLength: 3,
         trim: true
     },
-    email: String,
-    password: String,
+    email: {
+        type:String,
+    },
+    password: {
+        type:String,
+    },
     cart: {
         type: Array,
         default: []
