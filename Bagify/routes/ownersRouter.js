@@ -23,6 +23,9 @@ router.get("/",(req,res)=> {
     res.send("owner Route working")
 })
 
-// console.log(process.env.NODE_ENV)
+router.get("/admin", (req,res)=>{
+    let success = req.flash("success")
+    res.render("createproducts", {success});
+})
 
 module.exports = router;
