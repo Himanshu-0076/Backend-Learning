@@ -18,8 +18,7 @@ router.get("/shop",isLoggedin, async(req,res)=> {
 router.get("/cart",isLoggedin, async (req,res)=> {
     let cartItems = await userModel.find()
     let user = await userModel.findOne({email: req.user.email}).populate("cart")
-    // console.log(user)
-    res.render("cart", {cartItems})
+    res.render("cart", {user})
 })
 
 router.get("/addtocart/:productid", isLoggedin, async(req,res)=> {
@@ -30,8 +29,25 @@ router.get("/addtocart/:productid", isLoggedin, async(req,res)=> {
     res.redirect("/shop")
 })
 
+router.get("/removeCart/:id",isLoggedin, async(req,res)=>{
+    const itemIdToRemove = req.params.id; 
+    const loggedInUserId = req.user._id; 
+    
+    await userModel.findOneAndUpdate(
+        loggedInUserId,
+        {$pull: {cart: {_id: itemIdToRemove}}}
+    );
+
+    res.redirect("/cart");
+})
+
 router.get("/admin",(req,res)=> {
     res.render('admin')
+})
+
+router.get("/discountProduct",async(req,res)=>{
+    let product = await productModel.find()
+    
 })
 
 module.exports = router
