@@ -1,0 +1,103 @@
+Task Tracker CLI
+
+A simple Command Line Interface (CLI) Task Tracker built using Node.js.
+It helps you manage tasks directly from the terminal with features like adding, updating, deleting, and tracking task status.
+
+🚀 Features
+Add new tasks
+Update task description
+Delete tasks
+Mark tasks as:
+Todo by default
+In Progress
+Done
+List all tasks
+Filter tasks by status
+Stores data in a local JSON file
+Colored terminal output (Git-like UI)
+🛠️ Tech Stack
+Node.js
+File System (fs module)
+JSON storage
+Chalk (for colored output)
+📂 Project Structure
+TaskTracker/
+│── app.js
+│── tasks.json
+│── package.json
+⚙️ Installation
+
+Clone the project:
+git clone "https://github.com/Himanshu-0076/Backend-Learning/tree/main/TaskTracker"
+Move into project folder:
+cd TaskTracker
+Install dependencies:
+npm install
+Install chalk (important):
+npm install chalk@4
+▶️ How to Run
+
+Run commands using Node.js:
+
+➕ Add Task
+node app.js add "Learn JavaScript"
+📋 List All Tasks
+node app.js list
+🔍 Filter Tasks
+node app.js list done
+node app.js list todo
+node app.js list in-progress
+✏️ Update Task
+node app.js update 1 "Learn Node.js"
+❌ Delete Task
+node app.js delete 1
+🚧 Mark Task as In Progress
+node app.js mark-in-progress 1
+✅ Mark Task as Done
+node app.js mark-done 1
+📦 Data Storage
+
+All tasks are stored in:
+
+tasks.json
+
+Example format:
+
+[
+  {
+    "id": 1,
+    "description": "Learn Node.js",
+    "status": "todo"
+  }
+]
+🎨 Output Example
+Id: 1 | Learn JS | todo
+Id: 2 | Build API | done
+Id: 3 | Practice | in-progress
+💡 Key Concepts Used
+process.argv (CLI arguments)
+File System (fs module)
+JSON parsing & stringifying
+Array methods (map, filter, forEach)
+Conditional logic
+Ternary operator
+Error handling (try/catch)
+🧠 Learning Outcome
+
+This project helps you understand:
+
+How CLI tools work
+Backend logic without database
+File-based data storage
+Real-world CRUD operations
+JavaScript array manipulation
+🔥 Future Improvements
+Add task priority (high/medium/low)
+Add due dates
+Add UUID instead of numeric ID
+Better CLI UI with tables
+Search tasks by keyword
+👨‍💻 Author
+
+Built by Himanshu
+Practice project for mastering Node.js backend fundamentals.
